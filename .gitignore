@@ -1,0 +1,12 @@
+.bsp
+.scala-build
+*~
+.DS_Store
+.history
+.idea*
+.metals*
+.vscode*
+null
+project/target
+sbt.json
+target
