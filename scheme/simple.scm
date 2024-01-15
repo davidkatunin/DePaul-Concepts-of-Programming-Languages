@@ -25,85 +25,105 @@
 
 ; Exercise 2.2.3(b)
 
-; evaluates to: 
+(list 'this '(is silly))
+; evaluates to: (this (is silly))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(c)
 
-; evaluates to: 
+(cons 'is '(this silly?))
+; evaluates to: (is this silly?)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(d)
 
-; evaluates to: 
+(quote (+ 2 3))
+; evaluates to: (+ 2 3)
+                this factors down to 5
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(e)
 
-; evaluates to: 
+(cons '+ '(2 3))
+; evaluates to: (+ 2 3)
+                this factors down to 5
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(f)
 
-; evaluates to: 
+(car '(+ 2 3))
+; evaluates to: +
+                this factors down to <native procedure +>
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(g)
 
-; evaluates to: 
+(cdr '(+ 2 3))
+; evaluates to: (2 3)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(h)
 
-; evaluates to: 
+cons
+; evaluates to: <native procedure cons>
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(i)
 
-; evaluates to: 
+(quote cons)
+; evaluates to: cons
+                this factors down to <native procedure cons>
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(j)
 
-; evaluates to: 
+(quote (quote cons))
+; evaluates to: 'cons
+                this factors down to cons
+                                    this factors down to <native procedure cons>
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(k)
 
-; evaluates to: 
+(car (quote (quote cons)))
+; evaluates to: quote
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(l)
 
-; evaluates to: 
+(+ 2 3)
+; evaluates to: 5
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(m)
 
-; evaluates to: 
+(+ '2 '3)
+; evaluates to: 5
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(n)
 
-; evaluates to: 
+(+ (car '(2 3)) (car (cdr '(2 3))))
+; evaluates to: 5
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Exercise 2.2.3(o)
 
-; evaluates to: 
+((car (list + - * /)) 2 3)
+; evaluates to: 5
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
