@@ -7,5 +7,16 @@
 
 def otpu (start : Int, end : Int) : List[Int] = {
   // TODO: Provide definition here.
-  null
-}
+  if (start < end) {
+    val l = List[Int]()
+    l
+  } else {
+    val firstList = List[Int](start)
+    if (start >= end){
+      val finalList = firstList ::: otpu(start - 1, end)
+      finalList
+      } else {
+        firstList
+      }
+    }
+  }

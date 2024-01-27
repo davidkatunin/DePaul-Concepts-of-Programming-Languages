@@ -6,5 +6,11 @@
 
 def sumList (xs : List[Int]) : Int = {
   // TODO: Provide definition here.
-  -1
+  if (xs == Nil) {
+    0
+  } else if (xs.length == 1) {
+    xs(0)
+  } else {
+    xs(0) + sumList(xs.patch(0, Nil, 1))
+  }
 }

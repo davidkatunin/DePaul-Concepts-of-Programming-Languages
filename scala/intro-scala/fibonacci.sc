@@ -4,5 +4,9 @@
 
 def fibonacci (n : Int) : Int = {
   // TODO: Provide definition here.
-  -1
+  if (n <= 1) {
+    n
+  } else {
+    fibonacci(n-1) + fibonacci(n-2)
+  }
 }

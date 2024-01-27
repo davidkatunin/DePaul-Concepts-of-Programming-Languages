@@ -4,5 +4,9 @@
 
 def factorial (n : Int) : Int = {
   // TODO: Provide definition here.
-  -1
+  if (n <= 1){
+    1
+  } else {
+    n * factorial(n-1)
+  }
 }

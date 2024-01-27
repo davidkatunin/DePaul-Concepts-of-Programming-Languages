@@ -10,5 +10,18 @@
 
 def maxList (xs : List[Int]) : Int = {
   // TODO: Provide definition here.
-  -1
+  if (xs.isEmpty) {
+    throw new NoSuchElementException("Empty")
+  }
+
+  if (xs.tail.isEmpty) {
+    xs.head
+  } else {
+    val largestSoFar = maxList(xs.tail)
+    if (xs.head > largestSoFar) {
+      xs.head
+    } else {
+      largestSoFar
+    }
+  }
 }

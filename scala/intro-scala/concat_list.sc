@@ -9,5 +9,11 @@
 
 def concatList (xs : List[String]) : String = {
   // TODO: Provide definition here.
-  null
+  if (xs == Nil) {
+    ""
+  } else if (xs.length == 1) {
+    xs(0)
+  } else {
+    xs(0) + "," + concatList(xs.patch(0, Nil, 1))
+  }
 }

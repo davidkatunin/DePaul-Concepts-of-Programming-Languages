@@ -8,7 +8,18 @@
 
 def maxListTailRecursiveAux (accumulator : Int, xs : List[Int]) : Int = {
   // TODO: Provide definition here.
-  -1
+  if (xs.isEmpty){
+    accumulator
+  } else if (xs.size == 1){
+    xs(0)
+  } else {
+    val largestSoFar = maxListTailRecursiveAux(xs.head,xs.tail)
+    if (largestSoFar < accumulator) {
+      accumulator
+    } else {
+      largestSoFar
+    }
+  }
 }
 
 def maxListTailRecursive (xs : List[Int]) : Int = {

@@ -8,5 +8,5 @@
 
 def swap (pair : (String, String)) : (String, String) = {
   // TODO: Provide definition here.
-  null
+  (pair._2, pair._1);
 }

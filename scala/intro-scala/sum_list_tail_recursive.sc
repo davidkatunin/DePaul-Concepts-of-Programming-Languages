@@ -15,5 +15,11 @@ def sumListTailRecursiveAux (accumulator : Int, xs : List[Int]) : Int = {
 
 def sumListTailRecursive (xs : List[Int]) : Int = {
   // TODO: Provide definition here.
-  -1
+  if (xs.size <= 0) {
+    0
+  } else if (xs.size == 1) {
+    xs(0)
+  } else {
+    xs(0) + sumListTailRecursiveAux(xs.head, xs.tail)
+  }
 }
