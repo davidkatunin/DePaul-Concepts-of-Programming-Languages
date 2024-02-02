@@ -6,5 +6,11 @@
 
 def myFilter [A] (xs:List[A], f:A=>Boolean) : List[A] = {
   // TODO: Provide definition here.
-  null
+  if (xs.isEmpty) {
+    Nil
+  } else if (f(xs.head)){
+    xs.head :: myFilter(xs.tail, f) 
+  } else {
+    myFilter(xs.tail,f)
+  }
 }

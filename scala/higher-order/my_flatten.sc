@@ -9,5 +9,9 @@
 
 def myFlatten [A] (xss:List[List[A]]) : List[A] = {
   // TODO: Provide definition here.
-  null
+  if (xss.isEmpty) {
+    Nil
+  } else {
+    xss.head ::: myFlatten(xss.tail)
+  }
 }

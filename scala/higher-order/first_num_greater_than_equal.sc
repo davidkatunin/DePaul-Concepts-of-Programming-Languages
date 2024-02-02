@@ -9,5 +9,11 @@
 
 def firstNumGreaterThanEqual (a : Int, xs : List[Int]) : Int = {
   // TODO: Provide definition here.
-  -1
+  if (xs.isEmpty) {
+    throw new RuntimeException()
+  } else if (xs.head >= a) {
+    xs.head
+  } else {
+    firstNumGreaterThanEqual(a, xs.tail)
+  }
 }

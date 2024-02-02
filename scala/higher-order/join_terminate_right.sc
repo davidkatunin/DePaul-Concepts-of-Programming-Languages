@@ -12,5 +12,9 @@ import fold_right._
 
 def joinTerminateRight (xs : List[String], delimiter : String) : String = {
   // TODO: Provide definition here.
-  null
+  if (xs.isEmpty) {
+    ""
+  } else {
+    xs.head + delimiter + joinTerminateRight(xs.tail, delimiter)
+  }
 }

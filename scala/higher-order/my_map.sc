@@ -6,5 +6,9 @@
 
 def myMap [A,B] (xs:List[A], f:A=>B) : List[B] = {
   // TODO: Provide definition here.
-  null
+  if (xs.isEmpty) {
+    Nil
+  } else {
+    f(xs.head) :: myMap(xs.tail, f)
+  } 
 }

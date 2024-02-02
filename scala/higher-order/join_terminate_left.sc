@@ -12,5 +12,9 @@ import fold_left._
 
 def joinTerminateLeft (xs : List[String], term : String) : String = {
   // TODO: Provide definition here.
-  null
+  if (xs.isEmpty) {
+    ""
+  } else {
+    xs.head + term + joinTerminateLeft(xs.tail, term)
+  }
 }

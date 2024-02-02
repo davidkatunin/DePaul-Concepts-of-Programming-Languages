@@ -11,5 +11,11 @@
 
 def firstIndexNumGreaterThanEqual (a : Int, xs : List[Int]) : Int = {
   // TODO: Provide definition here.
-  -1
+  if (xs.isEmpty || ((xs.length == 1) && xs.head < a)) {
+    throw new RuntimeException()
+  } else if (!(xs.head >= a)) {
+    1 + firstIndexNumGreaterThanEqual(a, xs.tail)
+  } else {
+    0
+  }
 }

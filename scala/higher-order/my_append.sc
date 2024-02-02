@@ -7,6 +7,11 @@
 
 def myAppend [A] (xs:List[A], ys:List[A]) : List[A] = {
   // TODO: Provide definition here.
-  null
+  if (xs.isEmpty && ys.isEmpty) {
+    Nil
+  } else if (xs.isEmpty) {
+    ys.head :: myAppend(xs,ys.tail)
+  } else {
+    xs.head :: myAppend(xs.tail,ys)
+  }
 }
-

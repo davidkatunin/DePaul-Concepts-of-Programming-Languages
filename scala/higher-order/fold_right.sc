@@ -8,5 +8,9 @@
 
 def myFoldRight [A,B] (xs:List[A], e:B, f:(A,B)=>B) : B = {
   // TODO: Provide definition here.
-  e
+  if (xs.isEmpty) {
+    e
+  } else {
+    myFoldRight(xs.dropRight(1), f(xs.last, e), f)
+  }
 }

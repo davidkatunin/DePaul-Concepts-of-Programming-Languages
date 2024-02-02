@@ -8,5 +8,9 @@
 
 def myFoldLeft [A,B] (xs:List[A], e:B, f:(B,A)=>B) : B = {
   // TODO: Provide definition here.
-  e
+  if (xs.isEmpty) {
+    e
+  } else {
+    myFoldLeft(xs.tail, f(e, xs.head), f)
+  }
 }
