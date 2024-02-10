@@ -9,5 +9,11 @@
 
 def member (a : Int, xs : List[Int]) : Boolean = {
   // TODO: Provide definition here.
-  false
+  if (xs.isEmpty) {
+    false;
+  } else if (xs.head == a){
+    true;
+  } else {
+    member(a, xs.tail);
+  }
 }

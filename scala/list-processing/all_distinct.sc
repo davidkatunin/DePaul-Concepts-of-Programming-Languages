@@ -13,5 +13,11 @@ import member._
 
 def allDistinct (xs : List[Int]) : Boolean = {
   // TODO: Provide definition here.
-  false
+  if (xs.isEmpty) {
+    true
+  } else if (member(xs.head, xs.tail)) {
+    false
+  } else {
+    allDistinct(xs.tail)
+  }
 }

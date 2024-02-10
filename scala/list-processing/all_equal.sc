@@ -12,5 +12,11 @@
 
 def allEqual (xs : List[Int]) : Boolean = {
   // TODO: Provide definition here.
-  false
+  if (xs.isEmpty || xs.size == 1) {
+    true;
+  } else if (xs.head != xs.tail.head){
+    false;
+  } else {
+    allEqual(xs.tail);
+  }
 }

@@ -6,5 +6,9 @@
 
 def delete3 [X] (x:X, ys:List[X]) : List[X] = {
   // TODO: Provide definition here.
-  null
+  if (ys.isEmpty) {
+    ys
+  }
+  val answer = ys.filter(_ != x)
+  answer
 }

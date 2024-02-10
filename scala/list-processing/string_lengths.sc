@@ -11,5 +11,8 @@
 
 def stringLengths (xs:List[String]) : List[(String, Int)] = {
   // TODO: Provide definition here.
-  null
+  if (xs.isEmpty) {
+    xs
+  }
+  xs.map(x => (x, x.length))
 }

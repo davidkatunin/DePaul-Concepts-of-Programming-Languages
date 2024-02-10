@@ -6,5 +6,11 @@
 
 def delete2 [X] (x:X, ys:List[X]) : List[X] = {
   // TODO: Provide definition here.
-  null
+  if (ys.isEmpty) {
+    ys
+  }
+  val answer = for (y <- ys; if y != x) yield {
+    y
+  }
+  answer
 }

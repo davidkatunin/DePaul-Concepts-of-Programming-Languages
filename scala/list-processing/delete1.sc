@@ -8,5 +8,11 @@
 
 def delete1 [X] (x:X, ys:List[X]) : List[X] = {
   // TODO: Provide definition here.
-  null
+  if (ys.isEmpty) {
+    ys
+  } else if (ys.head == x) {
+    delete1(x,ys.tail)
+  } else {
+    ys.head :: delete1(x,ys.tail)
+  }
 }

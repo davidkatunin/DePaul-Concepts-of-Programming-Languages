@@ -15,5 +15,12 @@
 
 def splitAt [X] (n:Int, xs:List[X]) : (List[X], List[X]) = {
   // TODO: Provide definition here.
-  null
+  if (xs.isEmpty) {
+    (Nil, Nil)
+  } else if (n <= 0) { 
+    (Nil, xs)
+  } else {
+    val (left, right) = splitAt(n - 1, xs.tail)
+    (xs.head :: left, right)
+  }
 }

@@ -6,8 +6,14 @@
 // EXAMPLE:
 // - removeDupes1 (List (1,1,2,3,3,3,4,4,5,6,7,7,8,9,2,2,2,9)) == List (1,2,3,4,5,6,7,8,9,2,9)
 
+
 def removeDupes1 [X] (xs:List[X]) : List[X] = {
   // TODO: Provide definition here.
-  null
+  if (xs.size <= 1) {
+    xs
+  } else if (xs.head == xs.tail.head) {
+    removeDupes1(xs.tail)
+  } else {
+    xs.head :: removeDupes1(xs.tail)
+  }
 }
-
