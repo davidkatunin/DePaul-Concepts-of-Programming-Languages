@@ -10,5 +10,8 @@ import adt._
 
 def makeExp1 (x : Int, y : Int) : Exp = {
   // TODO: Provide definition here.
-  ExpInt (0)
+  ExpBinOp( BinAdd,
+    ExpBinOp(BinMul, ExpInt(x), ExpInt(x)),
+    ExpBinOp(BinMul, ExpInt(y), ExpInt(y))
+  )
 }

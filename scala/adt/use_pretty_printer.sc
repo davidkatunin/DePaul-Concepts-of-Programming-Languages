@@ -8,6 +8,11 @@ import adt._
 
 def usePrettyPrinter (x : Int, y : Int) : String = {
   // TODO: Provide definition here.
-  ""
+  ppExp (
+    ExpBinOp( BinMul, 
+      ExpBinOp( BinAdd, ExpInt(x), ExpInt(y)),
+      ExpBinOp( BinAdd, ExpInt(x), ExpInt(y))
+    )
+  )
 }
 

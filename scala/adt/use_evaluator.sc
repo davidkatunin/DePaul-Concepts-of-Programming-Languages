@@ -9,6 +9,9 @@ import adt._
 
 def useEvaluator (x : Int, y : Int) : Int = {
   // TODO: Provide definition here.
-  0
+  ppVal ( evalExp( ExpBinOp( BinMul,
+    ExpBinOp(BinAdd, ExpInt(x), ExpInt(y)),
+    ExpBinOp(BinAdd, ExpInt(x), ExpInt(y))
+  ))).toInt
 }
 
