@@ -12,5 +12,12 @@ def refint1 (f : RefInt => Unit) : (Int, Int, Int) = {
   // val r = new RefInt (0)
   // f (r)
   // val n : Int = r.get ()
-  (-1, -1, -1)
+  val result = new RefInt(0)
+  f(result)
+  val one = result.get()
+  f(result)
+  val two = result.get()
+  f(result)
+  val three = result.get()
+  (one, two, three)
 }

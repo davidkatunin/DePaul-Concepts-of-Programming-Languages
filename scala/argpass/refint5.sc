@@ -8,4 +8,7 @@
 
 def refint5 (xs : List[RefInt]) : Unit = {
   // TODO: Provide definition here.
+  for (x <- xs) {
+    x.set(x.get() * 2)
+  }
 }

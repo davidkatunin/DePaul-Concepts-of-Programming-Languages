@@ -6,5 +6,7 @@
 
 def refint3 (r : RefInt) : RefInt = {
   // TODO: Provide definition here.
-  null
+  val result = new RefInt(r.get() * 2)
+  r.set(r.get() + 1)
+  result
 }

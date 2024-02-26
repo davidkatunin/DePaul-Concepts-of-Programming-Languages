@@ -9,5 +9,11 @@
 
 def refint4 (r : RefInt, f : RefInt => Unit) : Boolean = {
   // TODO: Provide definition here.
-  false
+  val test = new RefInt(r.get())
+  f(test)
+  if (test.get() == r.get()) {
+    true
+  } else {
+    false
+  }
 }
